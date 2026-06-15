@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAILWIND PROJECT</title>
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- NAV SECTION STARTS -->
+    <header class="header absolute top-0 left-0 w-full z-50 border-b border-amber-100/20">
+        <nav class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between py-6 text-white">
+            <!-- logo -->
+            <a href="./index.html" class="text-4xl text-amber-500 font-bold font-serif">
+                Savora
+            </a>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-amber-100 text-2xl cursor-pointer z-[60]">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- <div class="text-4xl text-amber-500 font-bold font-serif">Savora</div> -->
+
+            <!-- navigation links -->
+            <ul id="mobile-menu"
+                class="fixed top-0 right-[-100%] w-[280px] h-screen bg-black z-50 flex flex-col items-center justify-center gap-8 uppercase tracking-wide text-sm font-sans text-amber-100 duration-500 md:flex md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:right-0 md:gap-8">
+                <li class="hover:text-amber-500 duration-300"><a href="./index.html">Home</a></li>
+                <li class="hover:text-amber-500 duration-300"><a href="#">About</a></li>
+                <li class="hover:text-amber-500 duration-300"><a href="#">Menu</a></li>
+                <li class="hover:text-amber-500 duration-300"><a href="#">Reservation</a></li>
+            </ul>
+
+            <!-- button -->
+            <button
+                class="hidden md:block border border-amber-100 text-amber-100 px-6 py-2 uppercase text-base tracking-wider hover:bg-amber-500 hover:border-amber-500 hover:text-black duration-300">Book
+                A Table</button>
+
+            <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40"></div>
+        </nav>
+    </header>
+    <!-- NAV SECTION ENDS -->
+
+    <!-- BANNER SECTION STARTS  -->
+    <main>
+        <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
+            style="background-image: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.35)), url('./images/banner-image.png');">
+
+            <div>
+                <h1 class="text-white text-3xl md:text-5xl font-bold mb-6 font-serif">Artistry on a Plate</h1>
+
+                <p class="text-base text-amber-100 max-w-2xl mx-auto mb-8 italic leading-relaxed"> Experience a symphony
+                    of seasonal
+                    flavors curated
+                    by master chefs in an atmosphere of elegance and refinement.</p>
+
+                <!-- buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button
+                        class="bg-amber-100 text-black px-6 py-3 uppercase text-base cursor-pointer border border-amber-100 tracking-wider hover:bg-transparent hover:border-amber-500 hover:text-amber-500 duration-300">
+                        View Menu
+                    </button>
+
+                    <button
+                        class="border border-amber-100 text-amber-100 px-6 py-3 uppercase text-base cursor-pointer tracking-wider hover:bg-amber-500 hover:border-amber-500 hover:text-black duration-300">
+                        Our Philosophy
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- BANNER SECTION ENDS  -->
+        <!-- ABOUT SECTION STARTS -->
+        <section class="bg-taupe-950 text-amber-100 py-20 px-6">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+                <!-- LEFT TEXT -->
+                <div class="w-full md:w-1/2 md:pr-16 mb-10 md:mb-0">
+                    <span class="text-amber-500 text-sm uppercase tracking-wider">The Origin</span>
+
+                    <h2 class="text-white text-4xl font-bold mt-4 font-serif">Where Shadows Meet Soul</h2>
+
+                    <p class="mt-3 text-base leading-relaxed">Founded on the principle of sensory isolation, Savora
+                        removes
+                        the noise of the
+                        outside world so you can experience flavor in its purest form. Here, taste is shaped by
+                        contrast—light and dark, tradition and subversion—coming together to create something quietly
+                        extraordinary.</p>
+
+                    <p class="mt-3 text-base leading-relaxed">Each ingredient is sourced from secluded micro-farms,
+                        chosen
+                        for its rarity
+                        and integrity. Nothing is ordinary, and nothing is rushed. What reaches your palate is as rare
+                        and
+                        fleeting as the celestial event that shares our name.</p>
+
+                    <button
+                        class="bg-transparent border border-amber-500 text-base text-amber-500 px-6 py-3 mt-8 uppercase tracking-wider cursor-pointer hover:text-white hover:border-white transition-colors duration-300">Discover
+                        the chef</button>
+                </div>
+                <!-- RIGHT IMAGE -->
+                <div class="w-full md:w-1/2 relative">
+                    <img class="w-full h-[500px] object-cover" src="./images/about-image.jpg" alt="about-image">
+
+                    <div
+                        class="font-serif absolute -bottom-4 -left-4 bg-stone-800 text-white border border-amber-200 px-5 py-5 text-sm">
+                        <span class="text-3xl text-amber-500">12+</span>
+                        MICHELIN STARS
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT SECTION ENDS -->
+        <!-- CARD SECTION STARTS -->
+        <section class="bg-black py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- uper UPPER TEXT -->
+                <div class="text-center mb-16">
+                    <span class="text-amber-500 uppercase tracking-widest text-sm">Curated Menu</span>
+
+                    <h2 class="text-white text-4xl font-bold font-serif mt-4">Signature Creations</h2>
+
+                    <p class="max-w-2xl mx-auto mt-4 leading-relaxed text-base text-amber-100 italic">
+                        A curated collection of our most celebrated creations,
+                        crafted with rare ingredients and presented as edible art.
+                    </p>
+                </div>
+
+                <!-- CARDS -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- CARD-1 -->
+                    <div class="w-full border border-taupe-800 bg-taupe-950 p-4">
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[350px] object-cover hover:scale-105 duration-500"
+                                src="./images/card-1.jpg" alt="card-1">
+                        </div>
+                        <div
+                            class="mt-5 flex flex-col md:flex-row gap-4 text-center md:text-left justify-between items-center">
+                            <h3 class="text-white text-2xl font-serif">Heritage Wagyu</h3>
+
+                            <span class="text-amber-500 font-semibold">$210</span>
+                        </div>
+
+                        <p class="text-amber-100 mt-3 leading-relaxed">
+                            Cherrywood-smoked Wagyu, aged 45 days and paired with
+                            a delicate gold leaf marrow soufflé.
+                        </p>
+
+                        <div class="mt-5">
+                            <span
+                                class="border border-amber-500 text-amber-500 text-xs px-3 py-1 uppercase tracking-wider">
+                                Signature
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- CARD-2 -->
+                    <div class="w-full border border-taupe-800 bg-taupe-950 p-4">
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[350px] object-cover hover:scale-105 duration-500"
+                                src="./images/card-2.jpg" alt="card-2">
+                        </div>
+                        <div class="mt-5 flex justify-between items-center">
+                            <h3 class="text-white text-2xl font-serif">Midnight Risotto</h3>
+
+                            <span class="text-amber-500 font-semibold"> $180</span>
+                        </div>
+
+                        <p class="text-amber-100 mt-3 leading-relaxed">
+                            Black winter truffles, heirloom rice, and roasted
+                            chanterelles in perfect harmony.
+                        </p>
+
+                        <div class="mt-5">
+                            <span
+                                class="border border-amber-500 text-amber-500 text-xs px-3 py-1 uppercase tracking-wider">
+                                Chef's Choice
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- CARD-3 -->
+                    <div class="w-full border border-taupe-800 bg-taupe-950 p-4">
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[350px] object-cover hover:scale-105 duration-500"
+                                src="./images/card-3.jpg" alt="card-3">
+                        </div>
+                        <div class="mt-5 flex justify-between items-center">
+                            <h3 class="text-white text-2xl font-serif">Lunar Eclipse</h3>
+
+                            <span class="text-amber-500 font-semibold">$140</span>
+                        </div>
+
+                        <p class="text-amber-100 mt-3 leading-relaxed">
+                            VA molten chocolate sphere with salted caramel and
+                            airy whipped hazelnuts.
+                        </p>
+
+                        <div class="mt-5">
+                            <span
+                                class="border border-amber-500 text-amber-500 text-xs px-3 py-1 uppercase tracking-wider">
+                                Dessert
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CARD SECTION ENDS -->
+        <!-- GALLERY SECTION STARTS -->
+        <section class="bg-taupe-950 py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- UPPER TEXT -->
+                <div class="text-center mb-16">
+                    <span class="text-amber-500 uppercase tracking-widest text-sm">Visual Experience</span>
+
+                    <h2 class="text-white text-4xl font-bold font-serif mt-4">A Glimpse Into Savora</h2>
+
+                    <p class="max-w-2xl mx-auto mt-4 text-amber-100 italic leading-relaxed">
+                        Step into a world of refined interiors, signature dishes,
+                        and unforgettable moments crafted for every guest.
+                    </p>
+                </div>
+
+                <!-- GALLERY GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <!-- IMAGE 1 -->
+                    <div class="col-span-2 pr-2">
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[350px] md:h-[620px] object-cover hover:scale-105 duration-500"
+                                src="./images/gallery-1.jpg" alt="restaurant interior">
+                        </div>
+                    </div>
+
+                    <!-- MIDDLE COLUMN -->
+                    <div class="col-span-1 px-2">
+
+                        <div class="overflow-hidden mb-4">
+                            <img class="w-full h-[300px] object-cover hover:scale-105 duration-500"
+                                src="./images/gallery-2.jpg" alt="signature drink">
+                        </div>
+
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[300px] object-cover hover:scale-105 duration-500"
+                                src="./images/gallery-3.jpg" alt="luxury table setup">
+                        </div>
+
+                    </div>
+
+                    <!-- IMAGE 4 -->
+                    <div class="col-span-1 pl-2">
+                        <div class="overflow-hidden">
+                            <img class="w-full h-[350px] md:h-[620px] object-cover hover:scale-105 duration-500"
+                                src="./images/gallery-4.jpg" alt="oyster dish">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- GALLERY SECTION ENDS -->
+        <!-- RESERVATION SECTION STARTS -->
+        <section class="bg-black py-20 px-6">
+
+            <div class="max-w-6xl mx-auto">
+
+                <!-- UPPER TEXT -->
+                <div class="text-center mb-16">
+                    <span class="text-amber-500 uppercase tracking-widest text-sm">
+                        Reservations
+                    </span>
+
+                    <h2 class="text-white text-4xl font-bold font-serif mt-4">
+                        Book Your Table
+                    </h2>
+
+                    <p class="max-w-2xl mx-auto mt-4 text-amber-100 italic leading-relaxed">
+                        Reserve your seat at Savora and experience world-class fine dining crafted with artistry and
+                        precision.
+                    </p>
+                </div>
+
+                <!-- FORM BOX -->
+                <div class="bg-taupe-950 border border-amber-100/10 p-10">
+
+                    <form>
+
+                        <!-- DATE + PARTY SIZE -->
+                        <div class="flex flex-col md:flex-row">
+
+                            <!-- DATE -->
+                            <div class="w-full md:w-1/2 md:pr-4 mb-6">
+                                <label class="text-amber-100 text-sm uppercase tracking-wider">
+                                    Select Date
+                                </label>
+
+                                <input type="date"
+                                    class="w-full mt-2 bg-black border border-gray-800 px-4 py-3 text-white outline-none focus:border-amber-500">
+                            </div>
+
+                            <!-- PARTY SIZE -->
+                            <div class="w-full md:w-1/2 md:pl-4 mb-6">
+                                <label class="text-amber-100 text-sm uppercase tracking-wider">
+                                    Party Size
+                                </label>
+
+                                <select
+                                    class="w-full mt-2 bg-black border border-gray-800 px-4 py-3 text-white outline-none focus:border-amber-500">
+                                    <option>1 Person</option>
+                                    <option>2 People</option>
+                                    <option>3 People</option>
+                                    <option>4 People</option>
+                                    <option>5+ People</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="mb-6">
+                            <label class="text-amber-100 text-sm uppercase tracking-wider">
+                                Email Address
+                            </label>
+
+                            <input type="email" placeholder="you@example.com"
+                                class="w-full mt-2 bg-black border border-gray-800 px-4 py-3 text-white outline-none focus:border-amber-500">
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="mb-6">
+                            <label class="text-amber-100 text-sm uppercase tracking-wider">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" placeholder="+91 98765 43210"
+                                class="w-full mt-2 bg-black border border-gray-800 px-4 py-3 text-white outline-none focus:border-amber-500">
+                        </div>
+
+                        <!-- SUBMIT -->
+                        <input type="submit" value="Request Availability"
+                            class="w-full bg-amber-200 text-black py-4 uppercase tracking-wider font-semibold hover:bg-amber-500 duration-300 cursor-pointer">
+
+                        <!-- NOTE -->
+                        <p class="text-gray-500 text-xs mt-4 text-center">
+                            * A confirmation email will be sent after booking approval.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- RESERVATION SECTION ENDS -->
+    </main>
+    <!-- FOOTER SECTION STARTS -->
+    <footer class="bg-black py-16 px-6">
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- COLUMN 1 -->
+            <div class="w-full px-4">
+                <h3 class="text-4xl font-serif mb-5">
+                    <a href="./index.html" class="text-amber-500">
+                        Savora
+                    </a>
+                </h3>
+
+                <p class="text-amber-100 leading-relaxed">
+                    Experience refined dining where culinary artistry,
+                    elegant ambiance, and exceptional service come together
+                    to create unforgettable moments.
+                </p>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="w-full px-4">
+                <h4 class="text-white text-xl font-semibold mb-5">
+                    Contact
+                </h4>
+
+                <ul class="space-y-3 text-amber-100">
+                    <li class="hover:text-amber-500 duration-300">
+                        Address: 8 Camac Street, Kolkata, West Bengal 700017
+                    </li>
+
+                    <li>
+                        <a href="tel:+919876543210" class="hover:text-amber-500 duration-300">
+                            Phone: +91 98765 43210
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:concierge@savora.in" class="hover:text-amber-500 duration-300">
+                            Mail: concierge@savora.in
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="w-full px-4">
+                <h4 class="text-white text-xl font-semibold mb-5">
+                    Opening Hours
+                </h4>
+
+                <ul class="text-amber-100">
+                    <li class="mb-2 hover:text-amber-500 duration-300">Tue - Thu: 6PM - 11PM</li>
+                    <li class="mb-2 hover:text-amber-500 duration-300">Fri - Sat: 6PM - 1AM</li>
+                    <li class="mb-2 hover:text-amber-500 duration-300">Sun: 12PM - 10PM</li>
+                    <li>Mon: Closed</li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4 -->
+            <div class="w-full px-4">
+                <h4 class="text-white text-xl font-semibold mb-5">
+                    Newsletter
+                </h4>
+
+                <div class="text-amber-100 mb-5 leading-relaxed">
+                    Subscribe for exclusive dining events,
+                    seasonal menus and special offers.
+                </div>
+
+                <form action="#">
+                    <div class="flex">
+
+                        <input type="email" placeholder="Your Email"
+                            class="w-full bg-[#111] border border-gray-800 px-4 py-3 text-white outline-none focus:border-amber-500">
+
+                        <button type="submit"
+                            class="ml-2 bg-amber-200 text-black px-5 uppercase tracking-wider hover:bg-amber-500 duration-300 cursor-pointer">
+                            Join
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="max-w-6xl mx-auto mt-14 pt-6 border-t border-amber-100/10 flex justify-between items-center">
+
+            <div class="text-sm text-gray-500">
+                © 2026 <a href="./index.html" class="hover:text-amber-500 transition-colors duration-300">Savora</a>.
+                All Rights
+                Reserved.
+            </div>
+
+            <div>
+                <a href="#" class="text-sm text-gray-500 hover:text-amber-500 duration-300 mr-6">
+                    Privacy Policy
+                </a>
+
+                <a href="#" class="text-sm text-gray-500 hover:text-amber-500 duration-300">
+                    Terms & Conditions
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- FOOTER SECTION ENDS -->
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#menu-btn").click(function () {
+
+                $("#mobile-menu").toggleClass("right-0 right-[-100%]");
+
+                $("#overlay").toggleClass("hidden");
+
+                $("#menu-btn i").toggleClass("fa-bars fa-xmark");
+
+            });
+
+            $("#overlay").click(function () {
+
+                $("#mobile-menu")
+                    .removeClass("right-0")
+                    .addClass("right-[-100%]");
+
+                $("#overlay").addClass("hidden");
+
+                $("#menu-btn i")
+                    .removeClass("fa-xmark")
+                    .addClass("fa-bars");
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
